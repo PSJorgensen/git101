@@ -2,8 +2,7 @@
 
 ## first executable command - the random walk, which is what this currently feels like
 
-#setting parameters
-
+#compiling function
 rand.walk<-function(sim.number,sim.length){
 
 #creating initital objects
@@ -68,5 +67,7 @@ return(return.object)
 
 }
 
+
+#setting parameters
 set.seed(234)
 output<-rand.walk(sim.number=500,sim.length=200)
