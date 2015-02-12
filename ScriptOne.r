@@ -31,13 +31,15 @@ summary.df<-as.data.frame(t(
 summary.df[,"n.plus.sd"]<-summary.df[,1]+summary.df[,2]
 summary.df[,"n.minus.sd"]<-summary.df[,1]-summary.df[,2]
 
-# plotting summary results
+# initiating plotting of summary results
 plot(summary.df[,1], type = "l", ylim = c(min(summary.df),max(summary.df)),
      xlab = "time", ylab = "n")
 
+#plotting standard deviation
 polygon(x = c(1:sim.number, sim.number:1),
         y = c(summary.df[,"n.minus.sd"], rev(summary.df[,"n.plus.sd"])), 
         col = "grey70")
         )
 
+#plotting mean
 lines(summary.df[,1])
